@@ -11,11 +11,11 @@ void setup() {
 
 void loop() {
 
-    // wait 1 mins before publishing again
+    // wait 5 mins before publishing again
     // can only publish 3 times, so not to clog users inbox
     if (just_published == true and publish_count < 3)
     {
-        delay(60 * 1000);
+        delay(5 * 60 * 1000);
         just_published = false;
     }
     
