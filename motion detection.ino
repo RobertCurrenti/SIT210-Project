@@ -22,6 +22,8 @@ void loop() {
     // if motion is detected publish event to trigger email being sent
     if (digitalRead(D2) == HIGH and just_published == false)
     {
+        // delay of 1 minute to give user time to turn off device
+        delay(60 * 1000);
         Particle.publish("event", "triggered", PUBLIC);
         just_published = true;
         publish_count += 1;
